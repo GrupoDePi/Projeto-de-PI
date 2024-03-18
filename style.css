@@ -1,0 +1,153 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Verdana;
+    background-color: whitesmoke;
+}
+.containerTUDO{
+    display: flex;
+    align-items: center;
+    min-height: 90vh;
+    justify-content: center;
+
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+    display: flex;
+}
+.header {
+    border-bottom: 3px solid #7fa64a;
+    background-image: url("https://www.infoescola.com/wp-content/uploads/2010/06/pirarucu_757650421.jpg")
+}
+
+.navbar {
+    width: 400px;
+    display: flex;
+    color: whitesmoke;
+    justify-content: space-between;
+    list-style: none;
+    align-items: center;
+    font-family: cursive;
+}
+.header .container {
+    justify-content: space-between;
+}
+.mensagem {
+    display: flex;
+    justify-content:left;
+}
+.imagem {
+    height: 80px;
+    width: 200px;
+    display: flex;
+    justify-content: left; 
+    align-items: left;
+
+}
+
+.backgroud{
+    background-image: url("https://www.infoescola.com/wp-content/uploads/2010/06/pirarucu_757650421.jpg");
+}
+
+.containerInput{
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    margin-top: auto;
+    margin-left: 20px;
+
+}
+
+.card {
+    width: 600px;
+    height: 350px;
+    border: 3px solid rgb(18, 59, 87);
+    border-radius: 25px;
+    background-color: whitesmoke    ;
+    margin: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.titulo {
+    font-family: cursive;
+    font-size: 25px;
+    font-weight: 500;
+    color: #7fa64a;
+    text-align: center;
+}
+.input_custos {
+    width: 420px;
+    border-radius: 3px;
+    border-color: transparent;
+    border-bottom: 2px solid rgb(181, 181, 181);
+    outline: 0;
+    text-align: center;
+    background-color: whitesmoke;
+}
+
+.input_custos:focus, 
+.input_custos:valid {
+    border-bottom: 2px solid  rgb(18, 59, 87);
+}
+    
+.input_perca {
+    width: 420px;
+    border-radius: 3px;
+    border-color: transparent;
+    border-bottom: 2px solid rgb(181, 181, 181);
+    outline: 0;
+    text-align: center;
+    background-color: whitesmoke;
+}
+
+.input_perca:focus,
+.input_perca:valid {
+    border-bottom: 2px solid  rgb(18, 59, 87);    
+}
+.input_qualidade{ 
+    width: 420px;
+    border-radius: 3px;
+    border-color: transparent;
+    border-bottom: 2px solid rgb(181, 181, 181);
+    outline: 0;
+    text-align: center;
+    background-color: whitesmoke;
+}
+.input_qualidade:focus,
+.input_qualidade:valid{ 
+    border-bottom: 2px solid  rgb(18, 59, 87);}
+
+.botão_calc {
+    font-size: 15px;
+    background-color: transparent;
+    color: rgb(18, 59, 87);
+    border-radius: 15px;
+    border-color: rgb(18, 59, 87);
+    outline: 0;  
+    font-weight: 500; 
+    
+
+}
+
+.div_textoExplicativo {
+    margin-right: 20px;
+     margin-left: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    text-align: justify;   
+}
+
+.img{
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content:space-between;
+    align-items: top;
+    float: right;
+
+}
