@@ -50,10 +50,10 @@
 
     <div class="containerTUDOCalc">
       
-      <div>
-        <fieldset class="card">
-        <legend class="titulo">Simulador Financeiro</legend>
-        <p>* obrigatorio</p>
+      <div class="card">       
+        <div class="tituloB">Simulador Financeiro </div>
+        <p class="paragrafo">* campos obrigatorios</p>
+        <p class="paragrafo">% padrão 33%</p>
         <input
           required
           type="number"
@@ -66,7 +66,7 @@
           type="number"
           id="input_precoKg"
           class="input_custos"
-          placeholder="Qual preço de vende kg do peixe (R$)*"
+          placeholder="Qual preço de venda do kg do peixe (R$)*"
         /><br />
         <input
           required
@@ -82,18 +82,15 @@
           placeholder="Perda por temperatura/umidade (%)"
         /><br />
         <button onclick="calcularcustos()" class="botão_calc">Calcular</button>
-      </fieldset>
-      </div>
-      <div class="cardTexto">
-        <div id="mensagens" class="div_textoExplicativo"></div>
-      </div>
      
-       
+      </div>
+
+      <div>
+        <div id="mensagens" class="div_textoExplicativo"></div>
       
-      
-    </div>
-    
-      
+        
+      </div>
+    </div> 
     </div>
   </body>
 </html>
@@ -117,9 +114,9 @@
 
     let ganhoRs = ganho * 1000 * precoKg;
 
-    mensagens.innerHTML = `Você tem uma perda anual de ${porcentagemPerda}% na sua produção. Dos mesmos, ${
+    mensagens.innerHTML = ` <div class="cardTexto"> Você tem uma perda anual de ${porcentagemPerda}% na sua produção. Dos mesmos, ${
       perdaAnoUmiTempP * 100
-    }% podem deixar de ocorrer com o nosso sistema de monitoramento, gerando ${ganho} Toneladas a mais por ano e um ganho de R$${ganhoRs}`;
+    }% podem deixar de ocorrer com o nosso sistema de monitoramento, gerando ${ganho} Toneladas a mais por ano e um ganho de R$${ganhoRs} </div>`;
   } // mudar css, garantir os 15%, calculo em peso, Tirar seleção de qualidade, valor e porcentagem
   // quantas toneladas produz, a quanto vende o KG de peixe, quantas toneladas perdidas e quantas são relacionadas a temperatura e umidade, se não souber, 33% das perdas são por temp e humidade.
 </script>

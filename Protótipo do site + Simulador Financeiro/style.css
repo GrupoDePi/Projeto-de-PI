@@ -9,7 +9,16 @@ body {
   align-items: center;
   min-height: 100vh;
   justify-content: center;
-  background-color: rgb(58, 53, 53);
+  background-color: #1A1F24;
+}
+.containerTUDOCalc {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 98.2vw;
+  min-height: 98.2vh;
+  background-color: #1A1F24;
 }
 
 .container {
@@ -18,8 +27,8 @@ body {
   display: flex;
 }
 .header {
-  border-bottom: 3px solid #4aa1a6;
-  background-color: rgb(53, 109, 111);
+  border-bottom: 3px solid #067A83;
+  background-color: #262B30;
 }
 
 .navbar {
@@ -29,7 +38,7 @@ body {
   justify-content: space-between;
   list-style: none;
   align-items: center;
-  font-family:'Courier New', Courier, monospace;
+  font-family: "Courier New", Courier, monospace;
 }
 .header .container {
   justify-content: space-between;
@@ -46,10 +55,6 @@ body {
   align-items: left;
 }
 
-.backgroud {
-  background-image: url("https://www.infoescola.com/wp-content/uploads/2010/06/pirarucu_757650421.jpg");
-}
-
 .containerInput {
   display: flex;
   align-items: center;
@@ -61,49 +66,54 @@ body {
 .card {
   width: 400px;
   height: 550px;
-  border: 3px solid rgb(100, 141, 150);
+  border: 3px solid #067A83;
   border-radius: 13px;
-  background-color: rgb(42, 39, 39);
+  background-color: #1A1F24;
   margin: 20px;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  
 }
 .cardTexto {
-  font-family:'Courier New', Courier, monospace;
+  font-family: "Courier New", Courier, monospace;
   width: 400px;
-  height: 550px;
-  border: 3px solid rgb(100, 141, 150);
+  height: fit-content;
+  border: 3px solid #067A83;
   border-radius: 13px;
-  background-color: rgb(42, 39, 39);
+  background-color: #1A1F24;
   margin: 20px;
   display: flex;
- 
+  padding: 10px 10px;
+
   align-items: center;
-  flex-direction:column;
+  flex-direction: column;
   float: right;
-  
 }
 
-.containerTUDOCalc {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  
-  width: 100vw;
-  height: 100vh;
-  background-color: rgb(58, 53, 53);
-  
-}
+
 
 .titulo {
-  font-family:'Courier New', Courier, monospace;
+  font-family: "Courier New", Courier, monospace;
   font-size: 25px;
   font-weight: 500;
   color: rgb(100, 141, 150);
-  text-align: center;
+}
+.tituloB {
+  font-family: "Courier New", Courier, monospace;
+  font-size: 25px;
+  font-weight: 500;
+  color: #067A83;
+  position: relative;
+  top: -100px;
+}
+.paragrafo {
+  color: rgb(118, 108, 108);
+  position: relative;
+  font-size: 12px;
+  text-align: left;
+  top: 280px;
+  left: -100px;
 }
 .input_custos {
   width: 320px;
@@ -169,7 +179,7 @@ body {
   margin-left: 20px;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 20px;
-  text-align:left;
+  text-align: left;
 }
 
 .img {
