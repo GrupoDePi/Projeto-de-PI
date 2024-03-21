@@ -48,16 +48,25 @@
       </div>
     </div>
 
-    <div class="containerTUDO">
-      <fieldset class="card">
+    <div class="containerTUDOCalc">
+      
+      <div>
+        <fieldset class="card">
         <legend class="titulo">Simulador Financeiro</legend>
-        <p>* obrigatorio </p>
+        <p>* obrigatorio</p>
         <input
           required
           type="number"
           id="input_producaoT"
           class="input_custos"
           placeholder="Qual sua produção anual? (toneladas)*"
+        /><br />
+        <input
+          required
+          type="number"
+          id="input_precoKg"
+          class="input_custos"
+          placeholder="Qual preço de vende kg do peixe (R$)*"
         /><br />
         <input
           required
@@ -69,40 +78,48 @@
         <input
           required
           id="input_perdaAnoUmiTempP"
-          class="input_qualidade"
+          class="input_custos"
           placeholder="Perda por temperatura/umidade (%)"
         /><br />
         <button onclick="calcularcustos()" class="botão_calc">Calcular</button>
-        <br />
-        <div id="mensagens" class="div_textoExplicativo"></div>
       </fieldset>
+      </div>
+      <div class="cardTexto">
+        <div id="mensagens" class="div_textoExplicativo"></div>
+      </div>
+     
+       
+      
+      
+    </div>
+    
+      
     </div>
   </body>
 </html>
 
 <script>
   function calcularcustos() {
-    let ProduçãoT = Number (input_producaoT.value)
-    let perdaAnoT = Number(input_perdaAnoT.value)
-    let perdaAnoUmiTempP = Number(input_perdaAnoUmiTempP.value)
+    let ProduçãoT = Number(input_producaoT.value);
+    let precoKg = Number(input_precoKg.value);
+    let perdaAnoT = Number(input_perdaAnoT.value);
+    let perdaAnoUmiTempP = Number(input_perdaAnoUmiTempP.value);
 
-    if (perdaAnoUmiTempP == 0){
-      perdaAnoUmiTempP = 33
-      } 
-    perdaAnoUmiTempP /= 100  
-   
-   
-   let porcentagemPerda = (100 * perdaAnoT )/ ProduçãoT
+    if (perdaAnoUmiTempP == 0) {
+      perdaAnoUmiTempP = 33;
+    }
+    perdaAnoUmiTempP /= 100;
 
-   let ganho = perdaAnoT - perdaAnoT * perdaAnoUmiTempP
-   ganho = perdaAnoT - ganho 
-  
-   mensagens.innerHTML = `Você tem uma perda anual de ${porcentagemPerda}% na sua produção. Dos mesmos, ${perdaAnoUmiTempP * 100}% podem deixar de ocorrer com o nosso sistema de monitoramento, gerando ${ganho} Toneladas a mais de peixe por ano `
+    let porcentagemPerda = (100 * perdaAnoT) / ProduçãoT;
 
-  
+    let ganho = perdaAnoT - perdaAnoT * perdaAnoUmiTempP;
+    ganho = perdaAnoT - ganho;
 
+    let ganhoRs = ganho * 1000 * precoKg;
 
-
+    mensagens.innerHTML = `Você tem uma perda anual de ${porcentagemPerda}% na sua produção. Dos mesmos, ${
+      perdaAnoUmiTempP * 100
+    }% podem deixar de ocorrer com o nosso sistema de monitoramento, gerando ${ganho} Toneladas a mais por ano e um ganho de R$${ganhoRs}`;
   } // mudar css, garantir os 15%, calculo em peso, Tirar seleção de qualidade, valor e porcentagem
   // quantas toneladas produz, a quanto vende o KG de peixe, quantas toneladas perdidas e quantas são relacionadas a temperatura e umidade, se não souber, 33% das perdas são por temp e humidade.
 </script>
