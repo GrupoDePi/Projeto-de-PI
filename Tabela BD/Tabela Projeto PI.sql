@@ -37,6 +37,7 @@ fkSensor INT,
 sequencia INT,
 data datetime,
 medicao varchar(50),
+primary key (fkSensor, sequencia),
 foreign key (fkSensor) references Sensor(id)
 );
 
@@ -50,3 +51,6 @@ values (1, 1, "2024-01-01 10:00:00", "24.5 | 65"),
 
 select ta.id as Tanque, ta.descricao as VolumeTanque, se.id as IDSensor, se.serial_sensor as SerialSensor, se.tipo as ModeloSensor, le.data as HoraMedição, le.sequencia as SequecinaMedição, le.medicao as TempUmi 
 from Tanque as ta join Sensor as se on ta.id = se.fkTanque join Leituras as le on se.id = le.fkSensor;
+
+insert into Leituras (fkSensor, sequencia, data, medicao)
+values (1,2, "2024-01-01 10:10:00", "24.5 | 65");
