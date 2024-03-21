@@ -97,26 +97,26 @@
 
 <script>
   function calcularcustos() {
-    let ProduçãoT = Number(input_producaoT.value);
+    let ProduçãoT = Number(input_producaoT.value); // definição de variaveis inicio
     let precoKg = Number(input_precoKg.value);
     let perdaAnoT = Number(input_perdaAnoT.value);
-    let perdaAnoUmiTempP = Number(input_perdaAnoUmiTempP.value);
+    let perdaAnoUmiTempP = Number(input_perdaAnoUmiTempP.value); // definição de variaveis fim
 
     if (perdaAnoUmiTempP == 0) {
-      perdaAnoUmiTempP = 33;
+      perdaAnoUmiTempP = 33; //perda padrão de 33%
     }
-    perdaAnoUmiTempP /= 100;
+    perdaAnoUmiTempP /= 100; //conversão para fazer as contas
 
-    let porcentagemPerda = (100 * perdaAnoT) / ProduçãoT;
+    let porcentagemPerda = (100 * perdaAnoT) / ProduçãoT; // regra de 3 para descobrir a porcentagem de perda geral
 
-    let ganho = perdaAnoT - perdaAnoT * perdaAnoUmiTempP;
-    ganho = perdaAnoT - ganho;
+    let ganho = perdaAnoT - perdaAnoT * perdaAnoUmiTempP; 
+    
+    ganho = perdaAnoT - ganho; // ganhos em peso (tonelada)
 
-    let ganhoRs = ganho * 1000 * precoKg;
+    let ganhoRs = ganho * 1000 * precoKg; // ganhos em Reais, baseado no kg no peixe
 
     mensagens.innerHTML = ` <div class="cardTexto"> Você tem uma perda anual de ${porcentagemPerda}% na sua produção. Dos mesmos, ${
       perdaAnoUmiTempP * 100
-    }% podem deixar de ocorrer com o nosso sistema de monitoramento, gerando ${ganho} Toneladas a mais por ano e um ganho de R$${ganhoRs} </div>`;
-  } // mudar css, garantir os 15%, calculo em peso, Tirar seleção de qualidade, valor e porcentagem
-  // quantas toneladas produz, a quanto vende o KG de peixe, quantas toneladas perdidas e quantas são relacionadas a temperatura e umidade, se não souber, 33% das perdas são por temp e humidade.
+    }% podem deixar de ocorrer com o nosso sistema de monitoramento, gerando ${ganho} Toneladas a mais por ano e um ganho de R$${ganhoRs} </div>`; // mensagem para o usuario
+  } 
 </script>
